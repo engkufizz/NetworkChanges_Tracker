@@ -1,18 +1,20 @@
 # 📡 Network Changes Tracker
 
-A simple desktop tool built with **PySide6** and **openpyxl** to help network engineers track **network changes** (e.g., OCRS, Work Permits).
+A simple desktop tool built with **PySide6** and **openpyxl** to help network engineers track **network changes** (Change Requests, Work Permits).
 It provides a clean UI to add, view, and manage records directly in an Excel file (`network_changes.xlsx`).
 
 ---
 
 ## ✨ Features
 
-* 📅 **Date Picker** – Select or auto-fill today’s date.
-* 📝 **Multi-line Description** – Write detailed work notes (multi-line automatically combined into one).
+* 📅 **Date Picker** – Select or auto-fill today’s approval date.
+* 🔢 **Request Number Field** – Enter CR/NC reference numbers (optional or can be enforced).
+* 📝 **Multi-line Description** – Write detailed work notes; multiple lines are auto-joined into a single line.
 * 📊 **Excel Integration** – All data is stored in `network_changes.xlsx` with separate sheets for:
 
-  * **OCRS**
-  * **WP**
+  * **CR** (Change Requests)
+  * **WP** (Work Permits)
+* 🗂 **Auto-Migration** – Old Excel files with only 2 columns are automatically upgraded to the 3-column format.
 * 🔄 **Quick Actions**
 
   * Add new record
@@ -27,14 +29,14 @@ It provides a clean UI to add, view, and manage records directly in an Excel fil
   * `Ctrl+O` → Open Excel file
   * `F5` → Refresh records
 * 📋 **Context Menu** – Right-click a row to copy it to clipboard.
-* 🎨 **Modern UI** – Styled interface with alternating row colors for readability.
+* 🎨 **Modern UI** – Clean interface with alternating row colors.
 
 ---
 
 ## 📂 File Structure
 
-* `network_changes.xlsx` → Auto-created if not found, contains 2 sheets: `OCRS`, `WP`.
-* `app.py` (your code) → Runs the GUI app.
+* `network_changes.xlsx` → Auto-created if not found, contains 2 sheets: `CR`, `WP`.
+* `app.py` (the app) → Runs the GUI.
 
 ---
 
@@ -63,11 +65,11 @@ python app.py
 
 ## 📑 Excel Format
 
-Each sheet (`OCRS`, `WP`) has the following headers:
+Each sheet (`CR`, `WP`) has the following headers:
 
-| Approval Date | Description of Work                  |
-| ------------- | ------------------------------------ |
-| 2025-08-30    | Router upgrade, configuration backup |
+| Approval Date | Request Number | Description of Work                  |
+| ------------- | -------------- | ------------------------------------ |
+| 2025-08-30    | CR/ENP/1234    | Router upgrade, configuration backup |
 
 ---
 
@@ -83,10 +85,10 @@ Each sheet (`OCRS`, `WP`) has the following headers:
 
 * **Excel file won’t save** → Close it if already open in Excel.
 * **PermissionError** → Move the app and Excel file to a writable folder (e.g., Desktop/Documents).
+* **Old Excel files with 2 columns** → The app will migrate them to the new 3-column format automatically.
 
 ---
 
 ## 📜 License
 
-MIT License – feel free to use, modify, and distribute.
-
+MIT License – free to use, modify, and distribute.
