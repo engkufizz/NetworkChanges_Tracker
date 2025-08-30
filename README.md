@@ -44,8 +44,8 @@ It provides a clean UI to add, view, and manage records directly in an Excel fil
 ### 1. Clone or Download
 
 ```bash
-git clone https://github.com/your-username/network-changes-tracker.git
-cd network-changes-tracker
+git clone https://github.com/engkufizz/NetworkChanges_Tracker.git
+cd NetworkChanges_Tracker
 ```
 
 ### 2. Install Requirements
