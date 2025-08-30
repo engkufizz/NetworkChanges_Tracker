@@ -14,7 +14,6 @@ It provides a clean UI to add, view, and manage records directly in an Excel fil
 
   * **CR** (Change Requests)
   * **WP** (Work Permits)
-* 🗂 **Auto-Migration** – Old Excel files with only 2 columns are automatically upgraded to the 3-column format.
 * 🔄 **Quick Actions**
 
   * Add new record
