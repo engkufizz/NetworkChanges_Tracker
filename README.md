@@ -1,4 +1,4 @@
-# 📡 Network Changes Tracker
+# 📟 Network Changes Tracker
 
 A simple desktop tool built with **PySide6** and **openpyxl** to help network engineers track **network changes** (Change Requests, Work Permits).
 It provides a clean UI to add, view, and manage records directly in an Excel file (`network_changes.xlsx`).
